@@ -1,0 +1,71 @@
+:root{
+  --primary-dark-color: #3C805B;
+  --primary-light-color: #479860
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-list {
+  font-size: 0;
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+.list-item {
+  display: inline-block;
+  position: relative;
+
+  /* padding: 10px 20px; Если написать padding здесь, кликабельная ссылка будет меньше всего размера списка и ее нужно будет выцеливать*/
+  border: 1px solid var(--primary-dark-color);
+  background-color: var(--primary-light-color);
+  color: white;
+
+  font-size: 16px;
+}
+.link{
+  display: inline-block;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+.list-item:hover {
+  background-color: var(--primary-dark-color);
+}
+
+.list-item:hover > .sub-nav-list {
+  display: block;
+}
+
+.sub-nav-list{
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: none;
+}
+
+.sub-nav-item{
+  display: block;
+}
+
+.sub-nav-item > .sub-nav-list{
+  top: 0;
+  left: 100%;
+  right: unset;
+  width: 100%;
+}
